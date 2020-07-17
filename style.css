@@ -1,0 +1,102 @@
+body {
+    margin: 0;
+    background-color: #143754;
+  }
+  
+  .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .rocket {
+    width: 230px;
+    position: relative;
+    z-index: 3;
+  }
+  
+  .red {
+    width: 80px;
+    height: 80px;
+    background: orangered;
+    box-shadow: 0px 0px 10px 5px orangered;
+  }
+  .orange {
+    left: 10px;
+    width: 60px;
+    height: 60px;
+    background: orange;
+    box-shadow: 0px 0px 12px 6px orange;
+  }
+  .gold {
+    left: 18px;
+    width: 45px;
+    height: 45px;
+    background: gold;
+    box-shadow: 0px 0px 9px 4px gold;
+  }
+  .white {
+    left: 22px;
+    width: 35px;
+    height: 35px;
+    background: lightyellow;
+    box-shadow: 0px 0px 9px 4px lightyellow;
+  }
+  .flame-anim {
+    position: relative;
+    animation: flicker 3ms ease-in infinite;
+  }
+  
+  .flame {
+    bottom: 0;
+    position: absolute;
+    border-radius: 50% 0% 50% 50%;
+    transform: rotate(-45deg);
+  }
+  @keyframes flicker {
+    0% {
+      transform: rotate(-1deg);
+    }
+    20% {
+      transform: rotate(3deg) scaleY(1.05);
+    }
+    60% {
+      transform: rotate(1deg);
+    }
+    80% {
+      transform: rotate(-1deg) scaleY(0.9);
+    }
+    100% {
+      transform: rotate(4deg);
+    }
+  }
+  
+  .rocket-wrapper {
+    position: absolute;
+    top: calc(50% + 0px);
+    left: calc(50% + 0px);
+    transform: translate(-50%, -50%) scale(0.6);
+  }
+  
+  .rocket-wrapper .flame-wrapper {
+    position: absolute;
+    width: max-content;
+    height: max-content;
+    left: 50%;
+    transform: scaleY(-1) translateX(-40px);
+    bottom: 46px;
+    opacity: 0;
+    transition: 240ms ease;
+  }
+  
+  .info {
+    font-weight: bold;
+    color: white;
+    font-size: 28px;
+    text-align: center;
+    padding-top: 140px;
+    font-family: Roboto, Arial;
+    text-transform: uppercase;
+  }
+  
